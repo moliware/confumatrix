@@ -62,7 +62,6 @@ Input file format: ::
 
     # Languages that can be detected
     types: [en, es, pt, it, de]
-    # it's cosidered a hit if result is less than umbral
     umbral: 0.5
     sample: 
       - result:
