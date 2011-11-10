@@ -66,16 +66,16 @@ Input file format: ::
     umbral: 0.5
     sample: 
       - result:
-          en: 0.88
-          es: 0.7
-          pt: 0.98
-          it: 0.6666  # is not a hit! ( 0.6666 > 0.5 )
-          de: 0.3 # hit
+          en: 0.1
+          es: 0.2
+          pt: 0.3
+          it: 0.6666  #hit! ( 0.6666 > 0.5 )
+          de: 0.3
         expected: de
       - result:
-          en: 0.88
-          es: 0.1 # hit
-          pt: 0.98
-          it: 0.6666
-          de: 0.3 # hit
+          en: 0.2
+          es: 0.99 # hit
+          pt: 0.98 # hit
+          it: 0.4
+          de: 0.3
         expected: es
