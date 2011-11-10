@@ -3,7 +3,7 @@
     confumatrix
     ~~~~~~~~~~~
 
-    Binary classification.
+    Calculates confusion Matrix.
 
     http://en.wikipedia.org/wiki/Confusion_matrix
 
@@ -24,24 +24,34 @@ class ConfuMatrix():
         self.d = d
 
     def accuracy(self):
+        if not self.a + self.b + self.c + self.d:
+            return None
         return float(self.a + self.d) / float(self.a + self.b + self.c + self.d)
 
     def precision(self):
-        return float(self.a) / max(1.0, float(self.a + self.b))
+        if not self.a + self.b:
+            return None
+        return float(self.a) / float(self.a + self.b)
 
     def recall(self):
-        return float(self.a) / max(1.0, float(self.a + self.c))
+        if not self.a + self.c:
+            return None
+        return float(self.a) / float(self.a + self.c)
 
     def specificity(self):
-        return float(self.d) / max(1.0, float(self.b + self.d))
+        if not self.b + self.d:
+            return None
+        return float(self.d) / float(self.b + self.d)
 
     def sensitivity(self):
         return self.recall()
 
     def f1(self):
-        precision = self.precision()
-        recall = self.recall()
-        return 2.0 * precision * recall / max(1.0, (precision + recall))
+        precision = self.precision() or 0
+        recall = self.recall() or 0
+        if not precision + recall:
+            return None
+        return 2.0 * precision * recall / (precision + recall)
 
     def __str__(self):
         s = ''
