@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
     binary_clasification
@@ -49,7 +50,6 @@ def load_sample(sample_file):
 
 
 def main():
-
     # Check params
     if len(sys.argv) != 2:
         print usage()
@@ -75,8 +75,7 @@ def main():
         # Expected value for current case
         expected = case['expected']
         # Resulted values for current case
-        resulted = filter(lambda x : x < sample['umbral'], case['result'])
-
+        resulted = [k for k, v in case['result'].items() if v > sample['umbral']]
         for ty in sample['types']:
             if expected == ty:
                 if expected in resulted:
