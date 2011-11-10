@@ -98,7 +98,7 @@ def caption():
     print '%s Help %s\n' % ('-' * 10, '-' * 10)
     print 'Confusion Matrix:\n'
     print '\t\tTrue\t\tFalse'
-    print 'Positive:\tTrue positive\tfalse negative'
+    print 'Positive:\tTrue positive\tfalse positive'
     print 'Negative:\tfalse negative\tTrue negative\n\n'
     print 'Accuracy: degree of veracity'
     print 'Precision: degree of reproducibility'
