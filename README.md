@@ -15,7 +15,7 @@ From source code:
 
 From pypi:
 
-    pip intall confumatrix
+    pip install confumatrix
 
 
 # Usage
