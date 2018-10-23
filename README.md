@@ -54,7 +54,9 @@ From pypi:
 
 Loads a YAML file with results of a binary classfication and prints Confusion matrix for that results.
 
-Input file format: ::
+Input file format:
+
+```yaml
 
     # Languages that can be detected
     types: [en, es, pt, it, de]
@@ -74,3 +76,4 @@ Input file format: ::
           it: 0.4
           de: 0.3
         expected: es
+```
