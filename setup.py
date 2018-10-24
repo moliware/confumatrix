@@ -6,7 +6,7 @@ import confumatrix
 setup(name = 'confumatrix',
       version = confumatrix.__version__,
       description = 'Confusion matrix tool for binary classification.',
-      long_description = open('README.rst').read(),
+      long_description = open('README.md').read(),
       author = confumatrix.__author__,
       author_email = confumatrix.__email__,
       url = 'https://github.com/moliware/confumatrix',

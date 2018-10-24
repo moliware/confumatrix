@@ -1,29 +1,26 @@
-confumatrix
-===========
+# confumatrix
 
 Confusion matrix tool.
 
 Further information:
 
-    * http://en.wikipedia.org/wiki/Binary_classification
-    * http://en.wikipedia.org/wiki/Sensitivity_and_specificity
+ - http://en.wikipedia.org/wiki/Binary_classification
+ - http://en.wikipedia.org/wiki/Sensitivity_and_specificity
 
-Instalation
------------
+# Instalation
 
-From source code: ::
+From source code:
 
-  python setup.py install
+    python setup.py install
 
-From pypi: ::
+From pypi:
 
-  pip intall confumatrix
+    pip install confumatrix
 
 
-Usage
------
-::
+# Usage
 
+```python
     >>> from confumatrix import ConfuMatrix
     >>> cm = ConfuMatrix(a=10, b=1, c=10, d=3)
     >>> cm.accuracy()
@@ -51,14 +48,15 @@ Usage
     Specificity: 0.75
     F-measure: 0.645161290323
     =========================
+```
 
+# binary_classification.py
 
-binary_classification.py
-------------------------
+Loads a YAML file with results of a binary classfication and prints Confusion matrix for that results.
 
-Load a yaml file with results of a binary classfication and prints Confusion matrix for that results.
+Input file format:
 
-Input file format: ::
+```yaml
 
     # Languages that can be detected
     types: [en, es, pt, it, de]
@@ -78,3 +76,4 @@ Input file format: ::
           it: 0.4
           de: 0.3
         expected: es
+```
